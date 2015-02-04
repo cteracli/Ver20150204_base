@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 #define SIZE 5
-
 int massimo(int valori[], int n);
 float media(int valori[], int n);
 float divisione(int dividendo, int divisore);
@@ -22,6 +21,10 @@ int main(int argc, char** argv) {
     
     printf("Inserisci %d valori interi POSITIVI\n", SIZE);
     // inserisci il codice necessario all'inserimento dei valori nell'array v
+    for(i=0; i<SIZE; i++){
+        printf("Valore: ");
+        scanf("%d", &v[i]);
+    }
     
     mas = massimo(v, SIZE);
     med = media(v, SIZE);
@@ -47,7 +50,13 @@ int main(int argc, char** argv) {
  */
 int massimo(int valori[], int n) {
     // TODO Implementa il codice della funzione
-    return -1;
+    int max;
+    for(i=0; i<n; i++){
+        if(valori[i]>max){
+            max=valori;
+        }
+    }
+    return max;
 }
 
 /*
@@ -55,7 +64,12 @@ int massimo(int valori[], int n) {
  */
 float media(int valori[], int n) {
     // TODO Implementa il codice della funzione
-    return -1;
+    int somma;
+    for(i=0; i<n; i++){
+        somma=somma+valori[i];
+    }
+    media=somma/n;
+    return media;
 }
 
 /*
@@ -64,7 +78,9 @@ float media(int valori[], int n) {
  */
 float divisione(int dividendo, int divisore) {
     // TODO Implementa il codice della funzione
-    return -1;
+    float div;
+    div=(float)dividendo/(float)divisore;
+    return div;
 }
 
 /*
@@ -73,7 +89,9 @@ float divisione(int dividendo, int divisore) {
  */
 int quoziente(int dividendo, int divisore) {
     // TODO Implementa il codice della funzione
-    return -1;
+    int quoz;
+    quoz= dividendo/divisore;
+    return quoz;
 }
 
 /*
@@ -82,7 +100,9 @@ int quoziente(int dividendo, int divisore) {
  */
 int restoDivisione(int dividendo, int divisore) {
     // TODO Implementa il codice della funzione
-    return -1;
+    int resto;
+    resto= dividendo%divisore;   
+    return resto;
 }
 
 /*
@@ -92,6 +112,9 @@ int restoDivisione(int dividendo, int divisore) {
  */
 float parteDecimaleDivisione(int dividendo, int divisore) {
     // TODO Implementa il codice della funzione
-    return -1;
+    float risultato;
+    ris=(float)dividendo/(float)divisore;
+    return ris;
+    
 }
 
